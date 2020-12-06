@@ -21,6 +21,7 @@ namespace Pendulum
 
         private void button1_Click(object sender, EventArgs e) //старт
         {
+            physics.SetWeightCoords(-Convert.ToSingle(textBox1.Text), -Convert.ToSingle(textBox2.Text));
             openGLControl1.FrameRate = 40;
             physics.stopWath.Start();
         }

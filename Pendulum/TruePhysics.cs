@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Pendulum
+﻿namespace Pendulum
 {
-    class TruePhysics
+    internal class TruePhysics
     {
     }
 }
