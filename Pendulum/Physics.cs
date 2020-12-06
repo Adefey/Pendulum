@@ -24,7 +24,7 @@ namespace Pendulum
             w = 5;
             phi0 = A / 2 * (float)Math.PI / 180; //автонахождение начальной фазы. Амплитуду перевести в радианы и делить на 2.
             stopWath = new Stopwatch();
-            GL = new Drawings(Control, new Vertex(0, -2, 10), new Vertex(0, -2, 0), new Vertex(0, 1, 0));
+            GL = new Drawings(Control, eyePos, centrePos, topPos);
         }
 
         public void SetWeightCoords(float w1, float w2)
