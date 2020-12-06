@@ -33,12 +33,17 @@ namespace Pendulum
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-            physics.SetWeightCoords(-trackBar1.Value, -trackBar2.Value);
+            physics.SetWeightCoords(trackBar1.Value, trackBar2.Value);
         }
 
         private void trackBar2_Scroll(object sender, EventArgs e)
         {
-            physics.SetWeightCoords(-trackBar1.Value, -trackBar2.Value);
+            physics.SetWeightCoords(trackBar1.Value, trackBar2.Value);
+        }
+
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            physics.ProcessPhysics();
         }
     }
 }

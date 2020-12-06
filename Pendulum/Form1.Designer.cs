@@ -181,6 +181,7 @@ namespace Pendulum
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Resize += new System.EventHandler(this.Form1_Resize);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.openGLControl1)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
