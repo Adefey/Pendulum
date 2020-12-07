@@ -22,14 +22,15 @@ namespace Pendulum
         private void openGLControl1_OpenGLDraw(object sender, SharpGL.RenderEventArgs args)
         {
             physics.ProcessPhysics();
-            label5.Text = "phi = " + physics.GetAngle().ToString() + "градусов";
-            label7.Text = "T = " + physics.GetT().ToString() + "сек";
+            label5.Text = "phi = " + physics.GetAngle().ToString() + " градусов";
+            label7.Text = "T = " + physics.GetT().ToString() + " сек";
+            label10.Text = "t = " + ((double)physics.stopWath.ElapsedMilliseconds / 1000).ToString() + " сек";
         }
 
         private void button1_Click(object sender, EventArgs e) //старт
         {
-            openGLControl1.FrameRate = 40;
-            physics.stopWath.Start();
+            openGLControl1.FrameRate = 50;
+            physics.stopWath.Restart();
         }
 
         private void button2_Click(object sender, EventArgs e) //стоп
