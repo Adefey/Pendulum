@@ -43,7 +43,7 @@ namespace Pendulum
             w2Coord = length * w2 / 10;
             C = (w1Coord + w2Coord) / 2;
             T = 2 * (float)Math.PI * (float)Math.Sqrt(C / g);
-            w = 2 * (float)Math.PI / T;
+            w = 2 * (float)Math.PI / (T+0.0001f);
         }
 
         public float GetAngle()

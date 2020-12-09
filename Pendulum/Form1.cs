@@ -85,5 +85,17 @@ namespace Pendulum
         {
             MessageBox.Show("Красный цилиндр - первый груз" + "\r\n" + "Зеленый цилиндр - второй груз" + "\r\n" + "Фиолетовая отметка - центр масс", "Инфо");
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            physics.stopWath.Stop();
+            physics.stopWath.Reset();
+            trackBar4.Value = 5;
+            trackBar3.Value = 5;
+            trackBar2.Value = 8;
+            trackBar1.Value = 4;
+            SyncLabels();
+            physics.ProcessPhysics();
+        }
     }
 }

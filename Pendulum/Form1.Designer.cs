@@ -53,6 +53,7 @@ namespace Pendulum
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.openGLControl1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -119,8 +120,9 @@ namespace Pendulum
             this.tableLayoutPanel2.Controls.Add(this.label11, 2, 3);
             this.tableLayoutPanel2.Controls.Add(this.label12, 2, 4);
             this.tableLayoutPanel2.Controls.Add(this.label13, 2, 5);
-            this.tableLayoutPanel2.Controls.Add(this.label14, 2, 7);
+            this.tableLayoutPanel2.Controls.Add(this.label14, 2, 2);
             this.tableLayoutPanel2.Controls.Add(this.button3, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.button4, 2, 7);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(575, 6);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(6);
@@ -281,7 +283,7 @@ namespace Pendulum
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(331, 106);
             this.label8.TabIndex = 14;
-            this.label8.Text = "Введите угол отклонения (0..5)";
+            this.label8.Text = "Введите начальный угол отклонения (0гр...5гр.)";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // trackBar4
@@ -355,9 +357,9 @@ namespace Pendulum
             // 
             this.label14.AutoSize = true;
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label14.Location = new System.Drawing.Point(677, 742);
+            this.label14.Location = new System.Drawing.Point(677, 212);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(163, 107);
+            this.label14.Size = new System.Drawing.Size(163, 106);
             this.label14.TabIndex = 21;
             this.label14.Text = "0";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -372,6 +374,17 @@ namespace Pendulum
             this.button3.Text = "?";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button4.Location = new System.Drawing.Point(677, 745);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(163, 101);
+            this.button4.TabIndex = 23;
+            this.button4.Text = "Сброс";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form1
             // 
@@ -423,6 +436,7 @@ namespace Pendulum
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }
 
