@@ -24,7 +24,7 @@ namespace Pendulum
             this.eyePos = eyePos;
             this.centrePos = centrePos;
             this.topPos = topPos;
-            InitCamera(eyePos, centrePos, topPos);
+            InitCamera();
         }
 
         private void Initlight()
@@ -43,7 +43,6 @@ namespace Pendulum
             position[0] = 0;
             position[1] = 0;
             position[2] = 50;
-            position[3] = 1f;
             float[] dir = { 0, 0, 0 };
 
             GL.Light(OpenGL.GL_LIGHT0, OpenGL.GL_AMBIENT, ambientColor);
@@ -59,7 +58,7 @@ namespace Pendulum
             GL.ShadeModel(OpenGL.GL_SMOOTH);
         }
 
-        public void InitCamera(Vertex eyePos, Vertex centrePos, Vertex topPos)
+        public void InitCamera()
         {
             GL.MatrixMode(OpenGL.GL_PROJECTION);
             GL.LoadIdentity();
@@ -77,10 +76,10 @@ namespace Pendulum
             GL.Flush();
             GL.Clear(OpenGL.GL_COLOR_BUFFER_BIT | OpenGL.GL_DEPTH_BUFFER_BIT);
             GL.LoadIdentity();
-            InitCamera(eyePos, centrePos, topPos);
+            InitCamera();
         }
 
-        public void DrawRod(Vertex UpCoord, Vertex LowCoord, double radius, Color color)
+        public void DrawRod(Vertex UpCoord, Vertex LowCoord, float radius, Color color)
         {
             GL.Begin(OpenGL.GL_QUAD_STRIP);
             GL.Color(color);

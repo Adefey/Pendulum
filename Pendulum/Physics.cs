@@ -29,7 +29,7 @@ namespace Pendulum
             C = (w1Coord + w2Coord) / 2;
             A = 5;
             T = 2 * (float)Math.PI * (float)Math.Sqrt((w1Coord + w2Coord) / (2 * g));
-            w = 2 * (float)Math.PI / T;
+            w = 0;
             phi0 = A / 2 * (float)Math.PI / 180; //автонахождение начальной фазы. Амплитуду перевести в радианы и делить на 2.
             stopWath = new Stopwatch();
             GL = new Drawings(Control, eyePos, centrePos, topPos);
@@ -43,7 +43,7 @@ namespace Pendulum
             w2Coord = length * w2 / 10;
             C = (w1Coord + w2Coord) / 2;
             T = 2 * (float)Math.PI * (float)Math.Sqrt(C / g);
-            w = 2 * (float)Math.PI / (T+0.0001f);
+            w = 2 * (float)Math.PI / T;
         }
 
         public float GetAngle()
@@ -71,6 +71,11 @@ namespace Pendulum
             return w2Coord;
         }
 
+        public void setW(float W)
+        {
+            this.w = W;
+        }
+
 
         public void ProcessPhysics()
         {
@@ -82,10 +87,10 @@ namespace Pendulum
             GL.Render();
             GL.DrawStand(new Vertex(0, 0, 0));
             GL.GL.Rotate(0, 0, rot);
-            GL.DrawRod(new Vertex(0, 0, 0), new Vertex(0, -length * 10, 0), 0.2, Color.Blue);
-            GL.DrawRod(new Vertex(0, -w1Coord * 10 - 0.1f, 0), new Vertex(0, -w1Coord * 10 + 0.1f, 0), 0.3, Color.Red);
-            GL.DrawRod(new Vertex(0, -w2Coord * 10 - 0.1f, 0), new Vertex(0, -w2Coord * 10 + 0.1f, 0), 0.3, Color.Green);
-            GL.DrawRod(new Vertex(0, -C * 10 - 0.05f, 0), new Vertex(0, -C * 10 + 0.05f, 0), 0.21, Color.BlueViolet);
+            GL.DrawRod(new Vertex(0, 0, 0), new Vertex(0, -length * 10, 0), 0.2f, Color.Blue);
+            GL.DrawRod(new Vertex(0, -w1Coord * 10 - 0.1f, 0), new Vertex(0, -w1Coord * 10 + 0.1f, 0), 0.3f, Color.Red);
+            GL.DrawRod(new Vertex(0, -w2Coord * 10 - 0.1f, 0), new Vertex(0, -w2Coord * 10 + 0.1f, 0), 0.3f, Color.Green);
+            GL.DrawRod(new Vertex(0, -C * 10 - 0.05f, 0), new Vertex(0, -C * 10 + 0.05f, 0), 0.21f, Color.BlueViolet);
         }
     }
 }

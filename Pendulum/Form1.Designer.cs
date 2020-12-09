@@ -84,7 +84,7 @@ namespace Pendulum
             // 
             this.openGLControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.openGLControl1.DrawFPS = false;
-            this.openGLControl1.FrameRate = 0;
+            this.openGLControl1.FrameRate = 50;
             this.openGLControl1.Location = new System.Drawing.Point(12, 11);
             this.openGLControl1.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
             this.openGLControl1.Name = "openGLControl1";

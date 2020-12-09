@@ -27,58 +27,49 @@ namespace Pendulum
         private void Form1_Resize(object sender, EventArgs e)
         {
             physics.SetParams(trackBar1.Value, trackBar2.Value, trackBar3.Value, trackBar4.Value);
-            physics.ProcessPhysics();
             SyncLabels();
+            physics.ProcessPhysics();
         }
 
         private void openGLControl1_OpenGLDraw(object sender, SharpGL.RenderEventArgs args)
-        {
-            physics.ProcessPhysics();
+        { 
             SyncLabels();
+            physics.ProcessPhysics();
         }
 
         private void button1_Click(object sender, EventArgs e) //старт
         {
-            if (openGLControl1.FrameRate == 0)
-            {
-                openGLControl1.FrameRate = 50;
-            }
-
             physics.stopWath.Restart();
         }
 
         private void button2_Click(object sender, EventArgs e) //стоп
         {
-            if (openGLControl1.FrameRate != 0)
-            {
-                openGLControl1.FrameRate = 0;
-            }
-
+            physics.setW(0);
             physics.stopWath.Stop();
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-            physics.ProcessPhysics();
             SyncLabels();
+            physics.ProcessPhysics();
         }
 
         private void trackBar2_Scroll(object sender, EventArgs e)
         {
-            physics.ProcessPhysics();
             SyncLabels();
+            physics.ProcessPhysics();
         }
 
         private void trackBar3_Scroll(object sender, EventArgs e)
         {
-            physics.ProcessPhysics();
             SyncLabels();
+            physics.ProcessPhysics();
         }
 
         private void trackBar4_Scroll(object sender, EventArgs e)
         {
-            physics.ProcessPhysics();
             SyncLabels();
+            physics.ProcessPhysics();
         }
 
         private void button3_Click(object sender, EventArgs e)
