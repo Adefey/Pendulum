@@ -54,6 +54,7 @@ namespace Pendulum
             this.label14 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.openGLControl1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -123,6 +124,7 @@ namespace Pendulum
             this.tableLayoutPanel2.Controls.Add(this.label14, 2, 2);
             this.tableLayoutPanel2.Controls.Add(this.button3, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.button4, 2, 7);
+            this.tableLayoutPanel2.Controls.Add(this.button5, 2, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(575, 6);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(6);
@@ -386,6 +388,17 @@ namespace Pendulum
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // button5
+            // 
+            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button5.Location = new System.Drawing.Point(677, 109);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(163, 100);
+            this.button5.TabIndex = 24;
+            this.button5.Text = "О программе";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
@@ -437,6 +450,7 @@ namespace Pendulum
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }
 

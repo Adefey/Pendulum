@@ -18,7 +18,7 @@ namespace Pendulum
             physics.SetParams(trackBar1.Value, trackBar2.Value, trackBar3.Value, trackBar4.Value);
             label5.Text = "phi = " + Math.Round(physics.GetAngle(), 3).ToString() + " градусов";
             label7.Text = "T = " + Math.Round(physics.GetT(), 3).ToString() + " сек";
-            label10.Text = "t = " + Math.Round((double)physics.stopWath.ElapsedMilliseconds / 1000, 3).ToString() + " сек";
+            label10.Text = "t = " + Math.Round((double)physics.stopWatch.ElapsedMilliseconds / 1000, 3).ToString() + " сек";
             label11.Text = trackBar4.Value.ToString() + " градусов";
             label12.Text = Math.Round(((double)trackBar3.Value / 10), 3).ToString() + " метров";
             label13.Text = "Координаты грузов: " + "\r\n" + "Первый: " + physics.GetW1().ToString() + " метров" + "\r\n" + "Второй: " + physics.GetW2().ToString() + " метров";
@@ -39,13 +39,13 @@ namespace Pendulum
 
         private void button1_Click(object sender, EventArgs e) //старт
         {
-            physics.stopWath.Restart();
+            physics.stopWatch.Restart();
         }
 
         private void button2_Click(object sender, EventArgs e) //стоп
         {
             physics.setW(0);
-            physics.stopWath.Stop();
+            physics.stopWatch.Stop();
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
@@ -79,14 +79,19 @@ namespace Pendulum
 
         private void button4_Click(object sender, EventArgs e)
         {
-            physics.stopWath.Stop();
-            physics.stopWath.Reset();
+            physics.stopWatch.Stop();
+            physics.stopWatch.Reset();
             trackBar4.Value = 5;
             trackBar3.Value = 5;
             trackBar2.Value = 8;
             trackBar1.Value = 4;
             SyncLabels();
             physics.ProcessPhysics();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            new AboutBox1().Show();
         }
     }
 }

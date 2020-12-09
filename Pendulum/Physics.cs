@@ -20,7 +20,7 @@ namespace Pendulum
         private float w1Coord;
         private float w2Coord;
         private float C; //центр масс
-        public Stopwatch stopWath;
+        public Stopwatch stopWatch;
         public Physics(OpenGLControl Control, Vertex eyePos, Vertex centrePos, Vertex topPos)
         {
             length = 0.5f;
@@ -31,7 +31,7 @@ namespace Pendulum
             T = 2 * (float)Math.PI * (float)Math.Sqrt((w1Coord + w2Coord) / (2 * g));
             w = 0;
             phi0 = A / 2 * (float)Math.PI / 180; //автонахождение начальной фазы. Амплитуду перевести в радианы и делить на 2.
-            stopWath = new Stopwatch();
+            stopWatch = new Stopwatch();
             GL = new Drawings(Control, eyePos, centrePos, topPos);
         }
 
@@ -82,7 +82,7 @@ namespace Pendulum
             //Система имеет одну степень свободы (грузы прочно закреплены). Параметр - rot - угол отклонения
             //rot вычисляется по классической формуле гармонических колебаний
             //phi = A * sin(w * t + phi0), где phi - угол отклонения, A - амплитуда, w - угловая частота, t - время в секундах, phi0 - начальное отклонение
-            t = (float)stopWath.ElapsedMilliseconds / 1000;
+            t = (float)stopWatch.ElapsedMilliseconds / 1000;
             rot = A * (float)Math.Sin(w * t + phi0);
             GL.Render();
             GL.DrawStand(new Vertex(0, 0, 0));
