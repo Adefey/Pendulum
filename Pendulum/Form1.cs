@@ -17,12 +17,12 @@ namespace Pendulum
         {
             physics.SetParams(trackBar1.Value, trackBar2.Value, trackBar3.Value, trackBar4.Value);
             label5.Text = "phi = " + Math.Round(physics.GetAngle(), 3).ToString() + " градусов";
-            label7.Text = "T = " + physics.GetT().ToString() + " сек";
-            label10.Text = "t = " + ((double)physics.stopWath.ElapsedMilliseconds / 1000).ToString() + " сек";
+            label7.Text = "T = " + Math.Round(physics.GetT(), 3).ToString() + " сек";
+            label10.Text = "t = " + Math.Round((double)physics.stopWath.ElapsedMilliseconds / 1000, 3).ToString() + " сек";
             label11.Text = trackBar4.Value.ToString() + " градусов";
-            label12.Text = ((double)trackBar3.Value / 10).ToString() + " метров";
-            label13.Text ="Координаты грузов: " + "\r\n" + "Первый: " + physics.GetW1().ToString() + " метров" + "\r\n" + "Второй: " + physics.GetW2().ToString() + " метров";
-            label14.Text = "Центр масс: " + physics.GetC().ToString() + " метров";
+            label12.Text = Math.Round(((double)trackBar3.Value / 10), 3).ToString() + " метров";
+            label13.Text = "Координаты грузов: " + "\r\n" + "Первый: " + physics.GetW1().ToString() + " метров" + "\r\n" + "Второй: " + physics.GetW2().ToString() + " метров";
+            label14.Text = "Центр масс: " + Math.Round(physics.GetC(), 3).ToString() + " метров";
         }
         private void Form1_Resize(object sender, EventArgs e)
         {
@@ -39,13 +39,21 @@ namespace Pendulum
 
         private void button1_Click(object sender, EventArgs e) //старт
         {
-            openGLControl1.FrameRate = 50;
+            if (openGLControl1.FrameRate == 0)
+            {
+                openGLControl1.FrameRate = 50;
+            }
+
             physics.stopWath.Restart();
         }
 
         private void button2_Click(object sender, EventArgs e) //стоп
         {
-            openGLControl1.FrameRate = 0;
+            if (openGLControl1.FrameRate != 0)
+            {
+                openGLControl1.FrameRate = 0;
+            }
+
             physics.stopWath.Stop();
         }
 
@@ -71,6 +79,11 @@ namespace Pendulum
         {
             physics.ProcessPhysics();
             SyncLabels();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Красный цилиндр - первый груз" + "\r\n" + "Зеленый цилиндр - второй груз" + "\r\n" + "Фиолетовая отметка - центр масс", "Инфо");
         }
     }
 }

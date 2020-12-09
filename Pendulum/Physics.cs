@@ -85,7 +85,7 @@ namespace Pendulum
             GL.DrawRod(new Vertex(0, 0, 0), new Vertex(0, -length * 10, 0), 0.2, Color.Blue);
             GL.DrawRod(new Vertex(0, -w1Coord * 10 - 0.1f, 0), new Vertex(0, -w1Coord * 10 + 0.1f, 0), 0.3, Color.Red);
             GL.DrawRod(new Vertex(0, -w2Coord * 10 - 0.1f, 0), new Vertex(0, -w2Coord * 10 + 0.1f, 0), 0.3, Color.Green);
-            GL.DrawRod(new Vertex(0, -C * 10 - 0.05f, 0), new Vertex(0, -C * 10 + 0.05f, 0), 0.3, Color.Magenta);
+            GL.DrawRod(new Vertex(0, -C * 10 - 0.05f, 0), new Vertex(0, -C * 10 + 0.05f, 0), 0.21, Color.BlueViolet);
         }
     }
 }

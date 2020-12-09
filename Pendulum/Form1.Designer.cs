@@ -52,6 +52,7 @@ namespace Pendulum
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.openGLControl1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -119,6 +120,7 @@ namespace Pendulum
             this.tableLayoutPanel2.Controls.Add(this.label12, 2, 4);
             this.tableLayoutPanel2.Controls.Add(this.label13, 2, 5);
             this.tableLayoutPanel2.Controls.Add(this.label14, 2, 7);
+            this.tableLayoutPanel2.Controls.Add(this.button3, 2, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(575, 6);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(6);
@@ -360,6 +362,17 @@ namespace Pendulum
             this.label14.Text = "0";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button3.Location = new System.Drawing.Point(677, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(163, 100);
+            this.button3.TabIndex = 22;
+            this.button3.Text = "?";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
@@ -369,6 +382,7 @@ namespace Pendulum
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pendulum";
             this.Resize += new System.EventHandler(this.Form1_Resize);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -408,6 +422,7 @@ namespace Pendulum
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button button3;
     }
 }
 
