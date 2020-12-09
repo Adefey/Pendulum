@@ -56,6 +56,22 @@ namespace Pendulum
             return T;
         }
 
+        public float GetC()
+        {
+            return C;
+        }
+
+        public float GetW1()
+        {
+            return w1Coord;
+        }
+
+        public float GetW2()
+        {
+            return w2Coord;
+        }
+
+
         public void ProcessPhysics()
         {
             //Система имеет одну степень свободы (грузы прочно закреплены). Параметр - rot - угол отклонения
