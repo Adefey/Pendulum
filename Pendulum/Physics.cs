@@ -16,13 +16,18 @@ namespace Pendulum
         private float w; //ммм... Наверное в радианах в секунду.
         private float phi0; //В радианах
         private float t;
-        private float length = 1;
-        private float w1Coord = 0.4f;
-        private float w2Coord = 0.8f;
+        private float length;
+        private float w1Coord;
+        private float w2Coord;
+        private float C; //центр масс
         public Stopwatch stopWath;
         public Physics(OpenGLControl Control, Vertex eyePos, Vertex centrePos, Vertex topPos)
         {
-            A = 45;
+            length = 0.5f;
+            w1Coord = 0.4f * length;
+            w2Coord = 0.8f * length;
+            C = (w1Coord + w2Coord) / 2;
+            A = 5;
             T = 2 * (float)Math.PI * (float)Math.Sqrt((w1Coord + w2Coord) / (2 * g));
             w = 2 * (float)Math.PI / T;
             phi0 = A / 2 * (float)Math.PI / 180; //автонахождение начальной фазы. Амплитуду перевести в радианы и делить на 2.
@@ -36,7 +41,8 @@ namespace Pendulum
             length = l / 10;
             w1Coord = length * w1 / 10;
             w2Coord = length * w2 / 10;
-            T = 2 * (float)Math.PI * (float)Math.Sqrt((w1Coord + w2Coord) / (2 * g));
+            C = (w1Coord + w2Coord) / 2;
+            T = 2 * (float)Math.PI * (float)Math.Sqrt(C / g);
             w = 2 * (float)Math.PI / T;
         }
 
@@ -57,10 +63,13 @@ namespace Pendulum
             //phi = A * sin(w * t + phi0), где phi - угол отклонения, A - амплитуда, w - угловая частота, t - время в секундах, phi0 - начальное отклонение
             t = (float)stopWath.ElapsedMilliseconds / 1000;
             rot = A * (float)Math.Sin(w * t + phi0);
-            GL.DrawRod(new Vertex(0, 0, 0), new Vertex(0, -length, 0), 0.2, Color.Blue);
-            GL.DrawRod(new Vertex(0, -w1Coord - 0.1f, 0), new Vertex(0, -w1Coord + 0.1f, 0), 0.3, Color.Red);
-            GL.DrawRod(new Vertex(0, -w2Coord - 0.1f, 0), new Vertex(0, -w2Coord + 0.1f, 0), 0.3, Color.Green);
-            GL.Render(rot);
+            GL.Render();
+            GL.DrawStand(new Vertex(0, 0, 0));
+            GL.GL.Rotate(0, 0, rot);
+            GL.DrawRod(new Vertex(0, 0, 0), new Vertex(0, -length * 10, 0), 0.2, Color.Blue);
+            GL.DrawRod(new Vertex(0, -w1Coord * 10 - 0.1f, 0), new Vertex(0, -w1Coord * 10 + 0.1f, 0), 0.3, Color.Red);
+            GL.DrawRod(new Vertex(0, -w2Coord * 10 - 0.1f, 0), new Vertex(0, -w2Coord * 10 + 0.1f, 0), 0.3, Color.Green);
+            GL.DrawRod(new Vertex(0, -C * 10 - 0.05f, 0), new Vertex(0, -C * 10 + 0.05f, 0), 0.3, Color.Magenta);
         }
     }
 }

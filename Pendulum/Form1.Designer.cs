@@ -202,18 +202,19 @@ namespace Pendulum
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(253, 56);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Длина стержня l (0..5м)";
+            this.label3.Text = "Длина стержня l (0.5м..0.6м)";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // trackBar3
             // 
             this.trackBar3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.trackBar3.Location = new System.Drawing.Point(262, 227);
-            this.trackBar3.Maximum = 50;
+            this.trackBar3.Maximum = 6;
+            this.trackBar3.Minimum = 5;
             this.trackBar3.Name = "trackBar3";
             this.trackBar3.Size = new System.Drawing.Size(254, 50);
             this.trackBar3.TabIndex = 9;
-            this.trackBar3.Value = 10;
+            this.trackBar3.Value = 5;
             this.trackBar3.Scroll += new System.EventHandler(this.trackBar3_Scroll);
             // 
             // label4
@@ -268,18 +269,18 @@ namespace Pendulum
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(253, 56);
             this.label8.TabIndex = 14;
-            this.label8.Text = "Введите угол отклонения (0..90)";
+            this.label8.Text = "Введите угол отклонения (0..5)";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // trackBar4
             // 
             this.trackBar4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.trackBar4.Location = new System.Drawing.Point(262, 171);
-            this.trackBar4.Maximum = 90;
+            this.trackBar4.Maximum = 5;
             this.trackBar4.Name = "trackBar4";
             this.trackBar4.Size = new System.Drawing.Size(254, 50);
             this.trackBar4.TabIndex = 15;
-            this.trackBar4.Value = 45;
+            this.trackBar4.Value = 5;
             this.trackBar4.Scroll += new System.EventHandler(this.trackBar4_Scroll);
             // 
             // label9

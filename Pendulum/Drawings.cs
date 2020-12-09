@@ -7,7 +7,7 @@ namespace Pendulum
 {
     internal class Drawings
     {
-        private OpenGL GL;
+        public OpenGL GL;
         private int ScreenWidth;
         private int ScreenHeight;
         private Vertex eyePos, centrePos, topPos;
@@ -72,14 +72,12 @@ namespace Pendulum
                         topPos.X, topPos.Y, topPos.Z);
         }
 
-        public void Render(float rot)
+        public void Render()
         {
             GL.Flush();
             GL.Clear(OpenGL.GL_COLOR_BUFFER_BIT | OpenGL.GL_DEPTH_BUFFER_BIT);
             GL.LoadIdentity();
             InitCamera(eyePos, centrePos, topPos);
-            GL.Rotate(0, 0, rot);
-
         }
 
         public void DrawRod(Vertex UpCoord, Vertex LowCoord, double radius, Color color)
@@ -91,6 +89,27 @@ namespace Pendulum
                 GL.Vertex(radius * Math.Cos(i) + UpCoord.X, UpCoord.Y, radius * Math.Sin(i) + UpCoord.Z);
                 GL.Vertex(radius * Math.Cos(i) + LowCoord.X, LowCoord.Y, radius * Math.Sin(i) + LowCoord.Z);
             }
+            GL.End();
+        }
+
+        public void DrawStand(Vertex hinge)
+        {
+            GL.Begin(OpenGL.GL_QUADS);
+            GL.Color(Color.Black);
+            GL.Vertex(hinge.X - 0.1f, hinge.Y+0.5f, hinge.Z - 0.5f);
+            GL.Vertex(hinge.X - 0.1f, hinge.Y - 7f, hinge.Z - 0.5f);
+
+            GL.Vertex(hinge.X + 0.1f, hinge.Y - 7f, hinge.Z - 0.5f);
+            GL.Vertex(hinge.X + 0.1f, hinge.Y + 0.5f, hinge.Z - 0.5f);
+            GL.End();
+
+            GL.Begin(OpenGL.GL_QUADS);
+            GL.Color(Color.Black);
+            GL.Vertex(hinge.X - 3f, hinge.Y - 7.5f, hinge.Z - 0.5f);
+            GL.Vertex(hinge.X - 3f, hinge.Y - 7f, hinge.Z - 0.5f);
+
+            GL.Vertex(hinge.X + 3f, hinge.Y - 7f, hinge.Z - 0.5f);
+            GL.Vertex(hinge.X + 3f, hinge.Y - 7.5f, hinge.Z - 0.5f);
             GL.End();
         }
     }

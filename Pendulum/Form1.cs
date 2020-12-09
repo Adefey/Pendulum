@@ -22,7 +22,7 @@ namespace Pendulum
         private void openGLControl1_OpenGLDraw(object sender, SharpGL.RenderEventArgs args)
         {
             physics.ProcessPhysics();
-            label5.Text = "phi = " + physics.GetAngle().ToString() + " градусов";
+            label5.Text = "phi = " +  Math.Round(physics.GetAngle(), 3).ToString() + " градусов";
             label7.Text = "T = " + physics.GetT().ToString() + " сек";
             label10.Text = "t = " + ((double)physics.stopWath.ElapsedMilliseconds / 1000).ToString() + " сек";
         }
