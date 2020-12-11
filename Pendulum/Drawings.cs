@@ -83,7 +83,7 @@ namespace Pendulum
         {
             GL.Begin(OpenGL.GL_QUAD_STRIP);
             GL.Color(color);
-            for (double i = 0; i <= 2.1 * Math.PI; i += 0.2)
+            for (double i = 0; i <= 2.1 * Math.PI; i += 0.3)
             {
                 GL.Vertex(radius * Math.Cos(i) + UpCoord.X, UpCoord.Y, radius * Math.Sin(i) + UpCoord.Z);
                 GL.Vertex(radius * Math.Cos(i) + LowCoord.X, LowCoord.Y, radius * Math.Sin(i) + LowCoord.Z);
@@ -95,19 +95,19 @@ namespace Pendulum
         {
             GL.Begin(OpenGL.GL_QUADS);
             GL.Color(Color.Black);
-            GL.Vertex(hinge.X - 0.3f, hinge.Y, hinge.Z - 0.5f);
-            GL.Vertex(hinge.X - 0.3f, hinge.Y - 7f, hinge.Z - 0.5f);
+            GL.Vertex(hinge.X - 0.3f, hinge.Y, hinge.Z - 0.35f);
+            GL.Vertex(hinge.X - 0.3f, hinge.Y - 7f, hinge.Z - 0.35f);
 
-            GL.Vertex(hinge.X + 0.3f, hinge.Y - 7f, hinge.Z - 0.5f);
-            GL.Vertex(hinge.X + 0.3f, hinge.Y, hinge.Z - 0.5f);
+            GL.Vertex(hinge.X + 0.3f, hinge.Y - 7f, hinge.Z - 0.35f);
+            GL.Vertex(hinge.X + 0.3f, hinge.Y, hinge.Z - 0.35f);
             GL.End();
 
             GL.Begin(OpenGL.GL_QUADS);
             GL.Color(Color.Black);
-            GL.Vertex(hinge.X - 3f, hinge.Y - 7.5f, hinge.Z - 0.5f);
-            GL.Vertex(hinge.X - 3f, hinge.Y - 7f, hinge.Z - 0.5f);
+            GL.Vertex(hinge.X - 3f, hinge.Y - 7.5f, hinge.Z - 0.35f);
+            GL.Vertex(hinge.X - 3f, hinge.Y - 7f, hinge.Z - 0.35f);
 
-            GL.Vertex(hinge.X + 3f, hinge.Y - 7f, hinge.Z - 0.5f);
+            GL.Vertex(hinge.X + 3f, hinge.Y - 7f, hinge.Z - 0.35f);
             GL.Vertex(hinge.X + 3f, hinge.Y - 7.5f, hinge.Z - 0.5f);
             GL.End();
         }
