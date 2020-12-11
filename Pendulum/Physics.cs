@@ -23,7 +23,7 @@ namespace Pendulum
         public Stopwatch stopWatch;
         public Physics(OpenGLControl Control, Vertex eyePos, Vertex centrePos, Vertex topPos)
         {
-            length = 0.5f;
+            length = 0.55f;
             w1Coord = 0.4f * length;
             w2Coord = 0.8f * length;
             C = (w1Coord + w2Coord) / 2;
@@ -71,11 +71,15 @@ namespace Pendulum
             return w2Coord;
         }
 
-        public void setW(float W)
+        public double getL()
         {
-            this.w = W;
+            return length;
         }
 
+        public void setW(float W)
+        {
+            w = W;
+        }
 
         public void ProcessPhysics()
         {
