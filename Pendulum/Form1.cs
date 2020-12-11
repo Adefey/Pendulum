@@ -17,13 +17,13 @@ namespace Pendulum
         {
             physics.SetParams(trackBar1.Value, trackBar2.Value, 5f + 0.5f * trackBar3.Value, trackBar4.Value, trackBar5.Value);
             label5.Text = "phi = " + Math.Round(physics.GetAngle(), 3).ToString() + " градусов";
-            //label7.Text = "T = " + Math.Round(physics.GetT(), 3).ToString() + " сек";
+            //textBox1.Text = "T = " + Math.Round(physics.GetT(), 3).ToString() + " сек"; раскомментируйте чтобы период выводился
             label10.Text = "t = " + Math.Round((double)physics.stopWatch.ElapsedMilliseconds / 1000, 3).ToString() + " сек";
             label11.Text = trackBar4.Value.ToString() + " градусов";
             label12.Text = Math.Round(physics.getL(), 3).ToString() + " метров";
             label13.Text = "Координаты грузов: " + "\r\n" + "Первый: " + physics.GetW1().ToString() + " метров" + "\r\n" + "Второй: " + physics.GetW2().ToString() + " метров";
             label14.Text = "Центр масс: " + Math.Round(physics.GetC(), 3).ToString() + " метров";
-            label15.Text = "Смещение вверх на " + Math.Round((physics.getL() * (float)trackBar5.Value / 10), 3).ToString() + " метров";
+            label15.Text = "Смещение вверх на " + Math.Round((physics.getL() * (float)trackBar5.Value / 10), 5).ToString() + " метров";
         }
         private void Form1_Resize(object sender, EventArgs e)
         {
@@ -46,6 +46,39 @@ namespace Pendulum
         {
             physics.setW(0);
             physics.stopWatch.Stop();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //MessageBox.Show("Красный цилиндр - первый груз" + "\r\n" + "Зеленый цилиндр - второй груз" + "\r\n" + "Фиолетовая отметка - центр масс", "Инфо");
+            try
+            {
+                float userInput = float.Parse(textBox1.Text);
+                if (Math.Abs(physics.GetT() - userInput) < 0.001)
+                {
+                    MessageBox.Show("Правильно!", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+                else
+                {
+                    MessageBox.Show("Неравильно, пересчитайте ответ. Должно было получиться " + Math.Round(physics.GetT(), 3).ToString(), "Результат", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ошибка ввода!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            physics.stopWatch.Stop();
+            physics.stopWatch.Reset();
+            trackBar4.Value = 5;
+            trackBar3.Value = 1;
+            trackBar2.Value = 8;
+            trackBar1.Value = 4;
+            SyncLabels();
+            physics.ProcessPhysics();
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
@@ -78,32 +111,6 @@ namespace Pendulum
             physics.ProcessPhysics();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            //MessageBox.Show("Красный цилиндр - первый груз" + "\r\n" + "Зеленый цилиндр - второй груз" + "\r\n" + "Фиолетовая отметка - центр масс", "Инфо");
-            float userInput = float.Parse(textBox1.Text);
-            if (Math.Abs(physics.GetT() - userInput) < 0.001)
-            {
-                MessageBox.Show("Правильно!", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-            }
-            else
-            {
-                MessageBox.Show("Неравильно, пересчитайте ответ. Должно было получиться " + Math.Round(physics.GetT(), 3).ToString(), "Результат", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            physics.stopWatch.Stop();
-            physics.stopWatch.Reset();
-            trackBar4.Value = 5;
-            trackBar3.Value = 1;
-            trackBar2.Value = 8;
-            trackBar1.Value = 4;
-            SyncLabels();
-            physics.ProcessPhysics();
-        }
-
         private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new AboutBox1().Show();
@@ -111,7 +118,7 @@ namespace Pendulum
 
         private void начальныеУсловияToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Примите g = 9,8145 м/c^2 и pi = 3,1415");
+            MessageBox.Show("Примите g = 9,8145 м/c^2 и pi = 3,1415", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
     }
