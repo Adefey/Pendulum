@@ -94,8 +94,8 @@ namespace Pendulum
             GL.DrawStand(new Vertex(0, 0, 0));
             GL.GL.Rotate(0, 0, rot);
             GL.DrawRod(new Vertex(0, offset * 10, 0), new Vertex(0, -length * 10 + offset * 10, 0), 0.2f, Color.Blue);
-            GL.DrawRod(new Vertex(0, -w1Coord * 10  - 0.1f, 0), new Vertex(0, -w1Coord * 10  + 0.1f, 0), 0.3f, Color.Red);
-            GL.DrawRod(new Vertex(0, -w2Coord * 10  - 0.1f, 0), new Vertex(0, -w2Coord * 10  + 0.1f, 0), 0.3f, Color.Green);
+            GL.DrawRod(new Vertex(0, -w1Coord * 10 - 0.1f, 0), new Vertex(0, -w1Coord * 10 + 0.1f, 0), 0.3f, Color.Red);
+            GL.DrawRod(new Vertex(0, -w2Coord * 10 - 0.1f, 0), new Vertex(0, -w2Coord * 10 + 0.1f, 0), 0.3f, Color.Green);
             GL.DrawRod(new Vertex(0, -C * 10 - 0.05f, 0), new Vertex(0, -C * 10 + 0.05f, 0), 0.21f, Color.BlueViolet);
         }
     }

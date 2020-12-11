@@ -23,7 +23,7 @@ namespace Pendulum
             label12.Text = Math.Round(physics.getL(), 3).ToString() + " метров";
             label13.Text = "Координаты грузов: " + "\r\n" + "Первый: " + physics.GetW1().ToString() + " метров" + "\r\n" + "Второй: " + physics.GetW2().ToString() + " метров";
             label14.Text = "Центр масс: " + Math.Round(physics.GetC(), 3).ToString() + " метров";
-            label15.Text = "Смещение вверх на " + Math.Round((physics.getL() * (float)trackBar5.Value / 10), 3).ToString();
+            label15.Text = "Смещение вверх на " + Math.Round((physics.getL() * (float)trackBar5.Value / 10), 3).ToString() + " метров";
         }
         private void Form1_Resize(object sender, EventArgs e)
         {
@@ -82,13 +82,13 @@ namespace Pendulum
         {
             //MessageBox.Show("Красный цилиндр - первый груз" + "\r\n" + "Зеленый цилиндр - второй груз" + "\r\n" + "Фиолетовая отметка - центр масс", "Инфо");
             float userInput = float.Parse(textBox1.Text);
-            if (Math.Abs(physics.GetT() - userInput) < 0.05)
+            if (Math.Abs(physics.GetT() - userInput) < 0.001)
             {
-                MessageBox.Show("Правильно!", "Результат");
+                MessageBox.Show("Правильно!", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
             else
             {
-                MessageBox.Show("Неравильно, пересчитайте ответ. Должно было получиться " + Math.Round(physics.GetT(), 3).ToString(), "Результат");
+                MessageBox.Show("Неравильно, пересчитайте ответ. Должно было получиться " + Math.Round(physics.GetT(), 3).ToString(), "Результат", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
