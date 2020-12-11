@@ -21,7 +21,7 @@ namespace Pendulum
             label10.Text = "t = " + Math.Round((double)physics.stopWatch.ElapsedMilliseconds / 1000, 3).ToString() + " сек";
             label11.Text = trackBar4.Value.ToString() + " градусов";
             label12.Text = Math.Round(physics.getL(), 3).ToString() + " метров";
-            label13.Text = "Координаты грузов:\r\nПервый: " + Math.Round(physics.GetW1(),3).ToString() + " метров\r\nВторой: " + Math.Round(physics.GetW2(), 3).ToString() + " метров";
+            label13.Text = "Координаты грузов:\r\nПервый: " + Math.Round(physics.GetW1(), 3).ToString() + " метров\r\nВторой: " + Math.Round(physics.GetW2(), 3).ToString() + " метров";
             label14.Text = "Центр масс: " + Math.Round(physics.GetC(), 3).ToString() + " метров";
             label15.Text = "Смещение вверх на " + Math.Round((physics.getL() * (float)trackBar5.Value / 10), 5).ToString() + " метров";
         }
@@ -73,10 +73,11 @@ namespace Pendulum
         {
             physics.stopWatch.Stop();
             physics.stopWatch.Reset();
-            trackBar4.Value = 5;
-            trackBar3.Value = 1;
-            trackBar2.Value = 8;
             trackBar1.Value = 4;
+            trackBar2.Value = 8;
+            trackBar3.Value = 1;
+            trackBar4.Value = 5;
+            trackBar5.Value = 0;
             SyncLabels();
             physics.ProcessPhysics();
         }
