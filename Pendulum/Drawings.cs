@@ -95,11 +95,11 @@ namespace Pendulum
         {
             GL.Begin(OpenGL.GL_QUADS);
             GL.Color(Color.Black);
-            GL.Vertex(hinge.X - 0.1f, hinge.Y+0.5f, hinge.Z - 0.5f);
-            GL.Vertex(hinge.X - 0.1f, hinge.Y - 7f, hinge.Z - 0.5f);
+            GL.Vertex(hinge.X - 0.3f, hinge.Y, hinge.Z - 0.5f);
+            GL.Vertex(hinge.X - 0.3f, hinge.Y - 7f, hinge.Z - 0.5f);
 
-            GL.Vertex(hinge.X + 0.1f, hinge.Y - 7f, hinge.Z - 0.5f);
-            GL.Vertex(hinge.X + 0.1f, hinge.Y + 0.5f, hinge.Z - 0.5f);
+            GL.Vertex(hinge.X + 0.3f, hinge.Y - 7f, hinge.Z - 0.5f);
+            GL.Vertex(hinge.X + 0.3f, hinge.Y, hinge.Z - 0.5f);
             GL.End();
 
             GL.Begin(OpenGL.GL_QUADS);

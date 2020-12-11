@@ -15,7 +15,7 @@ namespace Pendulum
         }
         private void SyncLabels()
         {
-            physics.SetParams(trackBar1.Value, trackBar2.Value, 5f + 0.5f * trackBar3.Value, trackBar4.Value);
+            physics.SetParams(trackBar1.Value, trackBar2.Value, 5f + 0.5f * trackBar3.Value, trackBar4.Value, trackBar5.Value);
             label5.Text = "phi = " + Math.Round(physics.GetAngle(), 3).ToString() + " градусов";
             //label7.Text = "T = " + Math.Round(physics.GetT(), 3).ToString() + " сек";
             label10.Text = "t = " + Math.Round((double)physics.stopWatch.ElapsedMilliseconds / 1000, 3).ToString() + " сек";
@@ -23,10 +23,10 @@ namespace Pendulum
             label12.Text = Math.Round(physics.getL(), 3).ToString() + " метров";
             label13.Text = "Координаты грузов: " + "\r\n" + "Первый: " + physics.GetW1().ToString() + " метров" + "\r\n" + "Второй: " + physics.GetW2().ToString() + " метров";
             label14.Text = "Центр масс: " + Math.Round(physics.GetC(), 3).ToString() + " метров";
+            label15.Text = "Смещение вверх на " + Math.Round((physics.getL() * (float)trackBar5.Value / 10), 3).ToString();
         }
         private void Form1_Resize(object sender, EventArgs e)
         {
-            physics.SetParams(trackBar1.Value, trackBar2.Value, trackBar3.Value, trackBar4.Value);
             SyncLabels();
             physics.ProcessPhysics();
         }
@@ -72,6 +72,12 @@ namespace Pendulum
             physics.ProcessPhysics();
         }
 
+        private void trackBar5_Scroll(object sender, EventArgs e)
+        {
+            SyncLabels();
+            physics.ProcessPhysics();
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
             //MessageBox.Show("Красный цилиндр - первый груз" + "\r\n" + "Зеленый цилиндр - второй груз" + "\r\n" + "Фиолетовая отметка - центр масс", "Инфо");
@@ -105,7 +111,8 @@ namespace Pendulum
 
         private void начальныеУсловияToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Задача решается нахождением приведенной длины математического маятника\r\nПримите g = 9,8145 м/c^2 и pi = 3,1415");
+            MessageBox.Show("Примите g = 9,8145 м/c^2 и pi = 3,1415");
         }
+
     }
 }

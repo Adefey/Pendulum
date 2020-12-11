@@ -20,6 +20,7 @@ namespace Pendulum
         private float w1Coord;
         private float w2Coord;
         private float C; //центр масс
+        private float offset; //смещение
         public Stopwatch stopWatch;
         public Physics(OpenGLControl Control, Vertex eyePos, Vertex centrePos, Vertex topPos)
         {
@@ -28,21 +29,22 @@ namespace Pendulum
             w2Coord = 0.8f * length;
             C = (w1Coord + w2Coord) / 2;
             A = 5;
-            T = 2 * (float)Math.PI * (float)Math.Sqrt((w1Coord + w2Coord) / (2 * g));
+            T = 2 * (float)Math.PI * (float)Math.Sqrt(C / g); //2 * (float)Math.PI * (float)Math.Sqrt(Math.Abs(C) / g); раскомментить чтобы включить рендер в любом случае
             w = 0;
             phi0 = A / 2 * (float)Math.PI / 180; //автонахождение начальной фазы. Амплитуду перевести в радианы и делить на 2.
             stopWatch = new Stopwatch();
             GL = new Drawings(Control, eyePos, centrePos, topPos);
         }
 
-        public void SetParams(float w1, float w2, float l, float r)
+        public void SetParams(float w1, float w2, float l, float r, float o)
         {
             A = r;
             length = l / 10;
-            w1Coord = length * w1 / 10;
-            w2Coord = length * w2 / 10;
+            offset = o / 10 * length;
+            w1Coord = length * w1 / 10 - offset;
+            w2Coord = length * w2 / 10 - offset;
             C = (w1Coord + w2Coord) / 2;
-            T = 2 * (float)Math.PI * (float)Math.Sqrt(C / g);
+            T = 2 * (float)Math.PI * (float)Math.Sqrt(C / g); //2 * (float)Math.PI * (float)Math.Sqrt(Math.Abs(C) / g); раскомментить чтобы включить рендер в любом случае
             w = 2 * (float)Math.PI / T;
         }
 
@@ -91,9 +93,9 @@ namespace Pendulum
             GL.Render();
             GL.DrawStand(new Vertex(0, 0, 0));
             GL.GL.Rotate(0, 0, rot);
-            GL.DrawRod(new Vertex(0, 0, 0), new Vertex(0, -length * 10, 0), 0.2f, Color.Blue);
-            GL.DrawRod(new Vertex(0, -w1Coord * 10 - 0.1f, 0), new Vertex(0, -w1Coord * 10 + 0.1f, 0), 0.3f, Color.Red);
-            GL.DrawRod(new Vertex(0, -w2Coord * 10 - 0.1f, 0), new Vertex(0, -w2Coord * 10 + 0.1f, 0), 0.3f, Color.Green);
+            GL.DrawRod(new Vertex(0, offset * 10, 0), new Vertex(0, -length * 10 + offset * 10, 0), 0.2f, Color.Blue);
+            GL.DrawRod(new Vertex(0, -w1Coord * 10  - 0.1f, 0), new Vertex(0, -w1Coord * 10  + 0.1f, 0), 0.3f, Color.Red);
+            GL.DrawRod(new Vertex(0, -w2Coord * 10  - 0.1f, 0), new Vertex(0, -w2Coord * 10  + 0.1f, 0), 0.3f, Color.Green);
             GL.DrawRod(new Vertex(0, -C * 10 - 0.05f, 0), new Vertex(0, -C * 10 + 0.05f, 0), 0.21f, Color.BlueViolet);
         }
     }
