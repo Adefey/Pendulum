@@ -29,7 +29,8 @@ namespace Pendulum
             w2Coord = 0.8f * length;
             C = (w1Coord + w2Coord) / 2;
             A = 5;
-            T = 2 * (float)Math.PI * (float)Math.Sqrt(C / g); //2 * (float)Math.PI * (float)Math.Sqrt(Math.Abs(C) / g); раскомментить чтобы включить рендер в любом случае
+            //T = 2 * (float)Math.PI * (float)Math.Sqrt(C / g); 
+            T = 2 * (float)Math.PI * (float)Math.Sqrt(Math.Abs(C) / g);
             w = 0;
             phi0 = A / 2 * (float)Math.PI / 180; //автонахождение начальной фазы. Амплитуду перевести в радианы и делить на 2.
             stopWatch = new Stopwatch();
@@ -44,7 +45,8 @@ namespace Pendulum
             w1Coord = length * w1 / 10 - offset;
             w2Coord = length * w2 / 10 - offset;
             C = (w1Coord + w2Coord) / 2;
-            T = 2 * (float)Math.PI * (float)Math.Sqrt(C / g); //2 * (float)Math.PI * (float)Math.Sqrt(Math.Abs(C) / g); раскомментить чтобы включить рендер в любом случае
+            //T = 2 * (float)Math.PI * (float)Math.Sqrt(C / g); 
+            T = 2 * (float)Math.PI * (float)Math.Sqrt(Math.Abs(C) / g);
             w = 2 * (float)Math.PI / T;
         }
 
