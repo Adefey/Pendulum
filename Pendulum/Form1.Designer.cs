@@ -58,6 +58,7 @@ namespace Pendulum
             this.label7 = new System.Windows.Forms.Label();
             this.trackBar5 = new System.Windows.Forms.TrackBar();
             this.label15 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.начальныеУсловияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,6 +70,7 @@ namespace Pendulum
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -110,16 +112,16 @@ namespace Pendulum
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.Controls.Add(this.button1, 0, 8);
-            this.tableLayoutPanel2.Controls.Add(this.button2, 1, 8);
+            this.tableLayoutPanel2.Controls.Add(this.button1, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.button2, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 5);
             this.tableLayoutPanel2.Controls.Add(this.label2, 1, 5);
             this.tableLayoutPanel2.Controls.Add(this.trackBar1, 0, 6);
             this.tableLayoutPanel2.Controls.Add(this.trackBar2, 1, 6);
             this.tableLayoutPanel2.Controls.Add(this.label3, 0, 4);
             this.tableLayoutPanel2.Controls.Add(this.trackBar3, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.label4, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label5, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label4, 0, 8);
+            this.tableLayoutPanel2.Controls.Add(this.label5, 1, 8);
             this.tableLayoutPanel2.Controls.Add(this.label6, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label8, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.trackBar4, 1, 3);
@@ -130,11 +132,12 @@ namespace Pendulum
             this.tableLayoutPanel2.Controls.Add(this.label13, 2, 5);
             this.tableLayoutPanel2.Controls.Add(this.label14, 2, 2);
             this.tableLayoutPanel2.Controls.Add(this.button3, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button4, 2, 8);
+            this.tableLayoutPanel2.Controls.Add(this.button4, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.textBox1, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label7, 0, 7);
             this.tableLayoutPanel2.Controls.Add(this.trackBar5, 1, 7);
             this.tableLayoutPanel2.Controls.Add(this.label15, 2, 7);
+            this.tableLayoutPanel2.Controls.Add(this.pictureBox1, 2, 8);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(575, 6);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(6);
@@ -149,16 +152,17 @@ namespace Pendulum
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(843, 825);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // button1
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(6, 734);
+            this.button1.Location = new System.Drawing.Point(6, 97);
             this.button1.Margin = new System.Windows.Forms.Padding(6);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(325, 85);
+            this.button1.Size = new System.Drawing.Size(325, 79);
             this.button1.TabIndex = 0;
             this.button1.Text = "Старт";
             this.button1.UseVisualStyleBackColor = true;
@@ -167,10 +171,10 @@ namespace Pendulum
             // button2
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(343, 734);
+            this.button2.Location = new System.Drawing.Point(343, 97);
             this.button2.Margin = new System.Windows.Forms.Padding(6);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(325, 85);
+            this.button2.Size = new System.Drawing.Size(325, 79);
             this.button2.TabIndex = 1;
             this.button2.Text = "Стоп";
             this.button2.UseVisualStyleBackColor = true;
@@ -247,9 +251,9 @@ namespace Pendulum
             // 
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Location = new System.Drawing.Point(3, 91);
+            this.label4.Location = new System.Drawing.Point(3, 728);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(331, 91);
+            this.label4.Size = new System.Drawing.Size(331, 97);
             this.label4.TabIndex = 10;
             this.label4.Text = "Текущий угол отклонения";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -258,9 +262,9 @@ namespace Pendulum
             // 
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Location = new System.Drawing.Point(340, 91);
+            this.label5.Location = new System.Drawing.Point(340, 728);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(331, 91);
+            this.label5.Size = new System.Drawing.Size(331, 97);
             this.label5.TabIndex = 11;
             this.label5.Text = "0";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -379,9 +383,9 @@ namespace Pendulum
             // button4
             // 
             this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.Location = new System.Drawing.Point(677, 731);
+            this.button4.Location = new System.Drawing.Point(677, 94);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(163, 91);
+            this.button4.Size = new System.Drawing.Size(163, 85);
             this.button4.TabIndex = 23;
             this.button4.Text = "Сброс";
             this.button4.UseVisualStyleBackColor = true;
@@ -427,6 +431,17 @@ namespace Pendulum
             this.label15.TabIndex = 28;
             this.label15.Text = "0";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::Pendulum.Properties.Resources.logos;
+            this.pictureBox1.Location = new System.Drawing.Point(677, 731);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(163, 91);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 29;
+            this.pictureBox1.TabStop = false;
             // 
             // menuStrip1
             // 
@@ -477,6 +492,7 @@ namespace Pendulum
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -517,6 +533,7 @@ namespace Pendulum
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TrackBar trackBar5;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
