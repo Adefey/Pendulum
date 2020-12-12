@@ -184,9 +184,10 @@ namespace Pendulum
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(3, 455);
+            this.label1.Location = new System.Drawing.Point(6, 461);
+            this.label1.Margin = new System.Windows.Forms.Padding(6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(331, 91);
+            this.label1.Size = new System.Drawing.Size(325, 79);
             this.label1.TabIndex = 4;
             this.label1.Text = "Координата красного груза (0..l)";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -195,9 +196,10 @@ namespace Pendulum
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(340, 455);
+            this.label2.Location = new System.Drawing.Point(343, 461);
+            this.label2.Margin = new System.Windows.Forms.Padding(6);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(331, 91);
+            this.label2.Size = new System.Drawing.Size(325, 79);
             this.label2.TabIndex = 5;
             this.label2.Text = "Координата зеленого груза (0..l)";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -206,9 +208,10 @@ namespace Pendulum
             // 
             this.trackBar1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.trackBar1.LargeChange = 1;
-            this.trackBar1.Location = new System.Drawing.Point(3, 549);
+            this.trackBar1.Location = new System.Drawing.Point(6, 552);
+            this.trackBar1.Margin = new System.Windows.Forms.Padding(6);
             this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(331, 85);
+            this.trackBar1.Size = new System.Drawing.Size(325, 79);
             this.trackBar1.TabIndex = 6;
             this.trackBar1.Value = 4;
             this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
@@ -217,9 +220,10 @@ namespace Pendulum
             // 
             this.trackBar2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.trackBar2.LargeChange = 1;
-            this.trackBar2.Location = new System.Drawing.Point(340, 549);
+            this.trackBar2.Location = new System.Drawing.Point(343, 552);
+            this.trackBar2.Margin = new System.Windows.Forms.Padding(6);
             this.trackBar2.Name = "trackBar2";
-            this.trackBar2.Size = new System.Drawing.Size(331, 85);
+            this.trackBar2.Size = new System.Drawing.Size(325, 79);
             this.trackBar2.TabIndex = 7;
             this.trackBar2.Value = 8;
             this.trackBar2.Scroll += new System.EventHandler(this.trackBar2_Scroll);
@@ -228,9 +232,10 @@ namespace Pendulum
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(3, 364);
+            this.label3.Location = new System.Drawing.Point(6, 370);
+            this.label3.Margin = new System.Windows.Forms.Padding(6);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(331, 91);
+            this.label3.Size = new System.Drawing.Size(325, 79);
             this.label3.TabIndex = 8;
             this.label3.Text = "Длина стержня l (0.5м..0.6м)";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -239,10 +244,11 @@ namespace Pendulum
             // 
             this.trackBar3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.trackBar3.LargeChange = 1;
-            this.trackBar3.Location = new System.Drawing.Point(340, 367);
+            this.trackBar3.Location = new System.Drawing.Point(343, 370);
+            this.trackBar3.Margin = new System.Windows.Forms.Padding(6);
             this.trackBar3.Maximum = 2;
             this.trackBar3.Name = "trackBar3";
-            this.trackBar3.Size = new System.Drawing.Size(331, 85);
+            this.trackBar3.Size = new System.Drawing.Size(325, 79);
             this.trackBar3.TabIndex = 9;
             this.trackBar3.Value = 1;
             this.trackBar3.Scroll += new System.EventHandler(this.trackBar3_Scroll);
@@ -251,9 +257,10 @@ namespace Pendulum
             // 
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Location = new System.Drawing.Point(3, 728);
+            this.label4.Location = new System.Drawing.Point(6, 734);
+            this.label4.Margin = new System.Windows.Forms.Padding(6);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(331, 97);
+            this.label4.Size = new System.Drawing.Size(325, 85);
             this.label4.TabIndex = 10;
             this.label4.Text = "Текущий угол отклонения";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -262,9 +269,10 @@ namespace Pendulum
             // 
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Location = new System.Drawing.Point(340, 728);
+            this.label5.Location = new System.Drawing.Point(343, 734);
+            this.label5.Margin = new System.Windows.Forms.Padding(6);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(331, 97);
+            this.label5.Size = new System.Drawing.Size(325, 85);
             this.label5.TabIndex = 11;
             this.label5.Text = "0";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -273,9 +281,10 @@ namespace Pendulum
             // 
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Location = new System.Drawing.Point(3, 0);
+            this.label6.Location = new System.Drawing.Point(6, 6);
+            this.label6.Margin = new System.Windows.Forms.Padding(6);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(331, 91);
+            this.label6.Size = new System.Drawing.Size(325, 79);
             this.label6.TabIndex = 12;
             this.label6.Text = "Введите период в секундах с \r\nточностью до 2 знаков после запятой\r\n";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -284,9 +293,10 @@ namespace Pendulum
             // 
             this.label8.AutoSize = true;
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Location = new System.Drawing.Point(3, 273);
+            this.label8.Location = new System.Drawing.Point(6, 279);
+            this.label8.Margin = new System.Windows.Forms.Padding(6);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(331, 91);
+            this.label8.Size = new System.Drawing.Size(325, 79);
             this.label8.TabIndex = 14;
             this.label8.Text = "Введите начальный угол отклонения (0гр...5гр.)";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -294,10 +304,11 @@ namespace Pendulum
             // trackBar4
             // 
             this.trackBar4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.trackBar4.Location = new System.Drawing.Point(340, 276);
+            this.trackBar4.Location = new System.Drawing.Point(343, 279);
+            this.trackBar4.Margin = new System.Windows.Forms.Padding(6);
             this.trackBar4.Maximum = 5;
             this.trackBar4.Name = "trackBar4";
-            this.trackBar4.Size = new System.Drawing.Size(331, 85);
+            this.trackBar4.Size = new System.Drawing.Size(325, 79);
             this.trackBar4.TabIndex = 15;
             this.trackBar4.Value = 5;
             this.trackBar4.Scroll += new System.EventHandler(this.trackBar4_Scroll);
@@ -306,9 +317,10 @@ namespace Pendulum
             // 
             this.label9.AutoSize = true;
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Location = new System.Drawing.Point(3, 182);
+            this.label9.Location = new System.Drawing.Point(6, 188);
+            this.label9.Margin = new System.Windows.Forms.Padding(6);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(331, 91);
+            this.label9.Size = new System.Drawing.Size(325, 79);
             this.label9.TabIndex = 16;
             this.label9.Text = "Время";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -317,9 +329,10 @@ namespace Pendulum
             // 
             this.label10.AutoSize = true;
             this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label10.Location = new System.Drawing.Point(340, 182);
+            this.label10.Location = new System.Drawing.Point(343, 188);
+            this.label10.Margin = new System.Windows.Forms.Padding(6);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(331, 91);
+            this.label10.Size = new System.Drawing.Size(325, 79);
             this.label10.TabIndex = 17;
             this.label10.Text = "0";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -328,9 +341,10 @@ namespace Pendulum
             // 
             this.label11.AutoSize = true;
             this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label11.Location = new System.Drawing.Point(677, 273);
+            this.label11.Location = new System.Drawing.Point(680, 279);
+            this.label11.Margin = new System.Windows.Forms.Padding(6);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(163, 91);
+            this.label11.Size = new System.Drawing.Size(157, 79);
             this.label11.TabIndex = 18;
             this.label11.Text = "0";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -339,9 +353,10 @@ namespace Pendulum
             // 
             this.label12.AutoSize = true;
             this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label12.Location = new System.Drawing.Point(677, 364);
+            this.label12.Location = new System.Drawing.Point(680, 370);
+            this.label12.Margin = new System.Windows.Forms.Padding(6);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(163, 91);
+            this.label12.Size = new System.Drawing.Size(157, 79);
             this.label12.TabIndex = 19;
             this.label12.Text = "0";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -350,10 +365,11 @@ namespace Pendulum
             // 
             this.label13.AutoSize = true;
             this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label13.Location = new System.Drawing.Point(677, 455);
+            this.label13.Location = new System.Drawing.Point(680, 461);
+            this.label13.Margin = new System.Windows.Forms.Padding(6);
             this.label13.Name = "label13";
             this.tableLayoutPanel2.SetRowSpan(this.label13, 2);
-            this.label13.Size = new System.Drawing.Size(163, 182);
+            this.label13.Size = new System.Drawing.Size(157, 170);
             this.label13.TabIndex = 20;
             this.label13.Text = "0";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -362,9 +378,10 @@ namespace Pendulum
             // 
             this.label14.AutoSize = true;
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label14.Location = new System.Drawing.Point(677, 182);
+            this.label14.Location = new System.Drawing.Point(680, 188);
+            this.label14.Margin = new System.Windows.Forms.Padding(6);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(163, 91);
+            this.label14.Size = new System.Drawing.Size(157, 79);
             this.label14.TabIndex = 21;
             this.label14.Text = "0";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -372,9 +389,10 @@ namespace Pendulum
             // button3
             // 
             this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Location = new System.Drawing.Point(677, 3);
+            this.button3.Location = new System.Drawing.Point(680, 6);
+            this.button3.Margin = new System.Windows.Forms.Padding(6);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(163, 85);
+            this.button3.Size = new System.Drawing.Size(157, 79);
             this.button3.TabIndex = 22;
             this.button3.Text = "Проверить";
             this.button3.UseVisualStyleBackColor = true;
@@ -383,9 +401,10 @@ namespace Pendulum
             // button4
             // 
             this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.Location = new System.Drawing.Point(677, 94);
+            this.button4.Location = new System.Drawing.Point(680, 97);
+            this.button4.Margin = new System.Windows.Forms.Padding(6);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(163, 85);
+            this.button4.Size = new System.Drawing.Size(157, 79);
             this.button4.TabIndex = 23;
             this.button4.Text = "Сброс";
             this.button4.UseVisualStyleBackColor = true;
@@ -394,19 +413,21 @@ namespace Pendulum
             // textBox1
             // 
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(340, 3);
+            this.textBox1.Location = new System.Drawing.Point(343, 6);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(6);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(331, 85);
+            this.textBox1.Size = new System.Drawing.Size(325, 79);
             this.textBox1.TabIndex = 25;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Location = new System.Drawing.Point(3, 637);
+            this.label7.Location = new System.Drawing.Point(6, 643);
+            this.label7.Margin = new System.Windows.Forms.Padding(6);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(331, 91);
+            this.label7.Size = new System.Drawing.Size(325, 79);
             this.label7.TabIndex = 26;
             this.label7.Text = "Смещение точки закрепления стержня (0..l/2)\r\n";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -414,10 +435,11 @@ namespace Pendulum
             // trackBar5
             // 
             this.trackBar5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.trackBar5.Location = new System.Drawing.Point(340, 640);
+            this.trackBar5.Location = new System.Drawing.Point(343, 643);
+            this.trackBar5.Margin = new System.Windows.Forms.Padding(6);
             this.trackBar5.Maximum = 5;
             this.trackBar5.Name = "trackBar5";
-            this.trackBar5.Size = new System.Drawing.Size(331, 85);
+            this.trackBar5.Size = new System.Drawing.Size(325, 79);
             this.trackBar5.TabIndex = 27;
             this.trackBar5.Scroll += new System.EventHandler(this.trackBar5_Scroll);
             // 
@@ -425,9 +447,10 @@ namespace Pendulum
             // 
             this.label15.AutoSize = true;
             this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label15.Location = new System.Drawing.Point(677, 637);
+            this.label15.Location = new System.Drawing.Point(680, 643);
+            this.label15.Margin = new System.Windows.Forms.Padding(6);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(163, 91);
+            this.label15.Size = new System.Drawing.Size(157, 79);
             this.label15.TabIndex = 28;
             this.label15.Text = "0";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -436,9 +459,10 @@ namespace Pendulum
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::Pendulum.Properties.Resources.logos;
-            this.pictureBox1.Location = new System.Drawing.Point(677, 731);
+            this.pictureBox1.Location = new System.Drawing.Point(680, 734);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(163, 91);
+            this.pictureBox1.Size = new System.Drawing.Size(157, 85);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 29;
             this.pictureBox1.TabStop = false;

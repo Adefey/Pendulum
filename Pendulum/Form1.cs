@@ -13,6 +13,20 @@ namespace Pendulum
             physics = new Physics(openGLControl1, new Vertex(0, -2, 9), new Vertex(0, -2, 0), new Vertex(0, 1, 0));
             physics.ProcessPhysics();
         }
+        private void Reset()
+        {
+            physics.stopWatch.Stop();
+            physics.stopWatch.Reset();
+            trackBar1.Value = 4;
+            trackBar2.Value = 8;
+            trackBar3.Value = 1;
+            trackBar4.Value = 5;
+            trackBar5.Value = 0;
+            SyncLabels();
+            textBox1.Text = "";
+            physics.ProcessPhysics();
+        }
+
         private void SyncLabels()
         {
             physics.SetParams(trackBar1.Value, trackBar2.Value, 5f + 0.5f * trackBar3.Value, trackBar4.Value, trackBar5.Value);
@@ -24,7 +38,13 @@ namespace Pendulum
             label13.Text = "Координаты грузов:\r\nПервый: " + Math.Round(physics.GetW1(), 3).ToString() + " метров\r\nВторой: " + Math.Round(physics.GetW2(), 3).ToString() + " метров";
             label14.Text = "Центр масс: " + Math.Round(physics.GetC(), 3).ToString() + " метров";
             label15.Text = "Смещение вверх на " + Math.Round((physics.getL() * (float)trackBar5.Value / 10), 5).ToString() + " метров";
+            if (physics.GetC() <= 0)
+            {
+                Reset();
+                MessageBox.Show("Нельзя, чтобы центр масс был выше точки закрепа", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
         private void Form1_Resize(object sender, EventArgs e)
         {
             SyncLabels();
@@ -69,17 +89,9 @@ namespace Pendulum
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e) //сброс
         {
-            physics.stopWatch.Stop();
-            physics.stopWatch.Reset();
-            trackBar1.Value = 4;
-            trackBar2.Value = 8;
-            trackBar3.Value = 1;
-            trackBar4.Value = 5;
-            trackBar5.Value = 0;
-            SyncLabels();
-            physics.ProcessPhysics();
+            Reset();
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
@@ -112,12 +124,12 @@ namespace Pendulum
             physics.ProcessPhysics();
         }
 
-        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e) //о программе
         {
             new AboutBox1().Show();
         }
 
-        private void начальныеУсловияToolStripMenuItem_Click(object sender, EventArgs e)
+        private void начальныеУсловияToolStripMenuItem_Click(object sender, EventArgs e) //начальные условия
         {
             MessageBox.Show("Примите g = 9,8145 м/c^2 и pi = 3,1415", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
