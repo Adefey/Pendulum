@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="SharpGL, Version=2.3.0.1, Culture=neutral, PublicKeyToken=27fc851303210b27, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -112,6 +115,12 @@
     <None Include="Resources\SharpGL.WinForms.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\about.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

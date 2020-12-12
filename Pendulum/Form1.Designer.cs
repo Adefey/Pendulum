@@ -29,6 +29,7 @@ namespace Pendulum
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.openGLControl1 = new SharpGL.OpenGLControl();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -460,6 +461,7 @@ namespace Pendulum
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";

@@ -28,15 +28,14 @@ namespace Pendulum
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutBox1));
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.logoPictureBox = new System.Windows.Forms.PictureBox();
             this.labelProductName = new System.Windows.Forms.Label();
             this.labelVersion = new System.Windows.Forms.Label();
             this.labelCopyright = new System.Windows.Forms.Label();
             this.labelCompanyName = new System.Windows.Forms.Label();
             this.textBoxDescription = new System.Windows.Forms.TextBox();
             this.okButton = new System.Windows.Forms.Button();
+            this.logoPictureBox = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -55,7 +54,6 @@ namespace Pendulum
             this.tableLayoutPanel.Controls.Add(this.okButton, 1, 5);
             this.tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel.Location = new System.Drawing.Point(18, 17);
-            this.tableLayoutPanel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tableLayoutPanel.Name = "tableLayoutPanel";
             this.tableLayoutPanel.RowCount = 6;
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -66,19 +64,6 @@ namespace Pendulum
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel.Size = new System.Drawing.Size(548, 327);
             this.tableLayoutPanel.TabIndex = 0;
-            // 
-            // logoPictureBox
-            // 
-            this.logoPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.logoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("logoPictureBox.Image")));
-            this.logoPictureBox.Location = new System.Drawing.Point(6, 6);
-            this.logoPictureBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.logoPictureBox.Name = "logoPictureBox";
-            this.tableLayoutPanel.SetRowSpan(this.logoPictureBox, 6);
-            this.logoPictureBox.Size = new System.Drawing.Size(168, 315);
-            this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.logoPictureBox.TabIndex = 12;
-            this.logoPictureBox.TabStop = false;
             // 
             // labelProductName
             // 
@@ -113,7 +98,7 @@ namespace Pendulum
             this.labelCopyright.Name = "labelCopyright";
             this.labelCopyright.Size = new System.Drawing.Size(350, 31);
             this.labelCopyright.TabIndex = 21;
-            this.labelCopyright.Text = "2020";
+            this.labelCopyright.Text = "2020\r\n\r\n";
             this.labelCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelCompanyName
@@ -140,19 +125,32 @@ namespace Pendulum
             this.textBoxDescription.Size = new System.Drawing.Size(350, 151);
             this.textBoxDescription.TabIndex = 23;
             this.textBoxDescription.TabStop = false;
-            this.textBoxDescription.Text = resources.GetString("textBoxDescription.Text");
+            this.textBoxDescription.Text = "Авторы:\r\nАндрей \"Adefe\" Коленков vk.com/Adefe\r\nАлександр \"ninekeem\" Якимов vk.com" +
+    "/ninekeem\r\n";
             // 
             // okButton
             // 
-            this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.okButton.Location = new System.Drawing.Point(392, 297);
-            this.okButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.okButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.okButton.Location = new System.Drawing.Point(183, 294);
             this.okButton.Name = "okButton";
-            this.okButton.Size = new System.Drawing.Size(150, 24);
+            this.okButton.Size = new System.Drawing.Size(362, 30);
             this.okButton.TabIndex = 24;
             this.okButton.Text = "&ОК";
             this.okButton.Click += new System.EventHandler(this.okButton_Click);
+            // 
+            // logoPictureBox
+            // 
+            this.logoPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.logoPictureBox.Image = global::Pendulum.Properties.Resources.about;
+            this.logoPictureBox.Location = new System.Drawing.Point(6, 6);
+            this.logoPictureBox.Margin = new System.Windows.Forms.Padding(6);
+            this.logoPictureBox.Name = "logoPictureBox";
+            this.tableLayoutPanel.SetRowSpan(this.logoPictureBox, 6);
+            this.logoPictureBox.Size = new System.Drawing.Size(168, 315);
+            this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logoPictureBox.TabIndex = 12;
+            this.logoPictureBox.TabStop = false;
             // 
             // AboutBox1
             // 
@@ -163,7 +161,7 @@ namespace Pendulum
             this.Controls.Add(this.tableLayoutPanel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AboutBox1";
