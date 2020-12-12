@@ -54,13 +54,13 @@ namespace Pendulum
             try
             {
                 float userInput = float.Parse(textBox1.Text);
-                if (Math.Abs(physics.GetT() - userInput) < 0.001)
+                if (Math.Abs(physics.GetT() - userInput) < 0.01)
                 {
                     MessageBox.Show("Правильно!", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
                 else
                 {
-                    MessageBox.Show("Неравильно, пересчитайте ответ. Должно было получиться " + Math.Round(physics.GetT(), 3).ToString(), "Результат", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Неравильно, пересчитайте ответ. Должно было получиться " + Math.Round(physics.GetT(), 4).ToString(), "Результат", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception)
@@ -121,6 +121,5 @@ namespace Pendulum
         {
             MessageBox.Show("Примите g = 9,8145 м/c^2 и pi = 3,1415", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
     }
 }

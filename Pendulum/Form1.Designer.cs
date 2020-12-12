@@ -277,7 +277,7 @@ namespace Pendulum
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(331, 91);
             this.label6.TabIndex = 12;
-            this.label6.Text = "Введите период в секундах с \r\nточностью до 3 знаков после запятой\r\n";
+            this.label6.Text = "Введите период в секундах с \r\nточностью до 2 знаков после запятой\r\n";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
@@ -439,7 +439,7 @@ namespace Pendulum
             this.pictureBox1.Location = new System.Drawing.Point(677, 731);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(163, 91);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 29;
             this.pictureBox1.TabStop = false;
             // 
