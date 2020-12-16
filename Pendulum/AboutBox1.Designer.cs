@@ -138,8 +138,7 @@ namespace Pendulum
             this.textBoxDescription.Size = new System.Drawing.Size(350, 151);
             this.textBoxDescription.TabIndex = 23;
             this.textBoxDescription.TabStop = false;
-            this.textBoxDescription.Text = "Авторы:\r\nАндрей \"Adefe\" Коленков vk.com/Adefe\r\nАлександр \"ninekeem\" Якимов vk.com" +
-    "/ninekeem\r\n";
+            this.textBoxDescription.Text = "Авторы:\r\nКоленков А.И\r\nЯкимов А.С.\r\nЗайкин К.Д.\r\nПанферов А.В";
             // 
             // okButton
             // 

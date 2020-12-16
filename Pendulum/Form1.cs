@@ -10,6 +10,7 @@ namespace Pendulum
         public Form1()
         {
             InitializeComponent();
+            KeyPreview = true;
             physics = new Physics(openGLControl1, new Vertex(0, -2, 9), new Vertex(0, -2, 0), new Vertex(0, 1, 0));
             physics.ProcessPhysics();
         }
@@ -132,6 +133,14 @@ namespace Pendulum
         private void начальныеУсловияToolStripMenuItem_Click(object sender, EventArgs e) //начальные условия
         {
             MessageBox.Show("Примите g = 9,8145 м/c^2 и pi = 3,1415", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.A)
+            {
+                MessageBox.Show("Adefe ninekeem ARM\r\nbeyond expectations\r\nvk.com/adefe vk.com/ninekeem", "Авторы", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }
