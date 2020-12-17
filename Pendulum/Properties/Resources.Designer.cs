@@ -63,9 +63,9 @@ namespace Pendulum.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap about {
+        internal static System.Drawing.Bitmap BigLogo {
             get {
-                object obj = ResourceManager.GetObject("about", resourceCulture);
+                object obj = ResourceManager.GetObject("BigLogo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace Pendulum.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logos {
+        internal static System.Drawing.Bitmap LogoOnForm {
             get {
-                object obj = ResourceManager.GetObject("logos", resourceCulture);
+                object obj = ResourceManager.GetObject("LogoOnForm", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

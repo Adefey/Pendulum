@@ -75,7 +75,7 @@ namespace Pendulum
             try
             {
                 float userInput = float.Parse(textBox1.Text);
-                if (Math.Abs(physics.GetT() - userInput) < 0.01)
+                if (Math.Abs(physics.GetT() - userInput) < 0.1)
                 {
                     MessageBox.Show("Правильно!", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }

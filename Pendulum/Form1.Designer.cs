@@ -458,7 +458,7 @@ namespace Pendulum
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Pendulum.Properties.Resources.logos;
+            this.pictureBox1.Image = global::Pendulum.Properties.Resources.LogoOnForm;
             this.pictureBox1.Location = new System.Drawing.Point(680, 734);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBox1.Name = "pictureBox1";
