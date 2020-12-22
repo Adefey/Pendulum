@@ -14,7 +14,7 @@ namespace Pendulum
         private float A; //В градусах
         private float T;
         private float w; //ммм... Наверное в радианах в секунду.
-        private float phi0; //В радианах
+        private float phi0; //В градусах
         private float t;
         private float length;
         private float w1Coord;
@@ -32,7 +32,7 @@ namespace Pendulum
             T = 2 * (float)Math.PI * (float)Math.Sqrt(C / g);
             //T = 2 * (float)Math.PI * (float)Math.Sqrt(Math.Abs(C) / g);
             w = 0;
-            phi0 = A / 2 * (float)Math.PI / 180; //автонахождение начальной фазы. Амплитуду перевести в радианы и делить на 2.
+            phi0 = (float)Math.PI / 2; //автонахождение начальной фазы. Амплитуду перевести в радианы и делить на 2.
             stopWatch = new Stopwatch();
             GL = new Drawings(Control, eyePos, centrePos, topPos);
         }

@@ -7,6 +7,7 @@ namespace Pendulum
         /// Обязательная переменная конструктора.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+        public string msg = "Adefe ninekeem ARM\r\nbeyond expectations\r\nvk.com/adefe vk.com/ninekeem\r\nКлассная))😍";
 
         /// <summary>
         /// Освободить все используемые ресурсы.

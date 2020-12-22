@@ -137,9 +137,9 @@ namespace Pendulum
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.A)
+            if (e.KeyCode == Keys.L)
             {
-                MessageBox.Show("Adefe ninekeem ARM\r\nbeyond expectations\r\nvk.com/adefe vk.com/ninekeem", "Авторы", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(msg, "Авторы", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
